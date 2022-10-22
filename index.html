@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <title>Document</title>
+        <style>
+            table , td , th {
+                border: 1px solid black;
+            }
+            th , td {
+                width: 33.3%;
+                height: 6vh;
+                text-align: center;
+            }
+            table {
+                width: 100%;
+            }
+            h1{
+                font-family: Brush Script MT;
+                font-size: 50px;
+            }label{
+                font-family: tahoma;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container p-4">
+        <h1>vente pizza</h1>
+            <form>
+                <label>Nom de client</label><input class="form-control w-25 d-block" type="text" id="nom">
+                <label>Adresse</label><input class="form-control w-25 d-block" type="text" id="adresse">
+                <h1 align="center">produits a acheter</h1>
+                <table>
+                    <tr>
+                        <th>Nom du produit</th>
+                        <th>Prix unitaire eb DH</th>
+                        <th>Quantite</th>
+                    </tr>
+                    <tr>
+                        <td>Pizza 4 fromage</td>
+                        <td>80</td>
+                        <td><input class="form-control w-50 mx-auto" type="number" id="pizzaF"></td>
+                    </tr>
+                    <tr>
+                        <td>Pizza Herbo</td>
+                        <td>75</td>
+                        <td><input class="form-control w-50 mx-auto" type="number" id="pizzaH"></td>
+                    </tr>
+                    <tr>
+                        <td>Pizza Viande hachee</td>
+                        <td>100</td>
+                        <td><input class="form-control w-50 mx-auto" type="number" id="pizzaV"></td>
+                    </tr>
+                    <tr>
+                        <td>Pizza fruits de mer</td>
+                        <td>120</td>
+                        <td><input class="form-control w-50 mx-auto" type="number" id="pizzafm"></td>
+                    </tr>
+                </table>
+                <br>
+                <h1>paiement par</h1>
+                <input class="form-check-input" type="radio" name="largent" onclick="cartblock()" id="carteB" checked><span>carte boncaire</span>
+                <input class="form-check-input" type="radio" name="largent" onclick="cartnone()" id="cheque"><span>cheque</span>
+                <br><br>
+                <label id="labelcart">Numero de la carte boncaire</label><input class="form-control w-25 d-block" type="text" id="NcarteB">
+                <br>
+                <input class="btn btn-dark" type="button" onclick="afficher()" value="envoyer">
+                <br><br>
+                <label>Merci de votre visible,le montant totale de votre commande est</label><input class="form-control w-25 ms-3 d-inline-block" type="number" id="result">
+            </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
